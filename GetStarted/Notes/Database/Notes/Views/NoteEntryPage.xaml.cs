@@ -54,7 +54,7 @@ namespace Notes.Views
         async void OnDeleteButtonClicked(object sender, EventArgs e)
         {
             var note = (Note)BindingContext;
-            await App.Database.DeleteNoteAsync(note);
+            object p = await App.Database.DeleteNoteAsync(note);
 
             // Navigate backwards
             await Shell.Current.GoToAsync("..");

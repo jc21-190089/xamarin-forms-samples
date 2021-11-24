@@ -21,6 +21,8 @@ namespace Notes.Views
             collectionView.ItemsSource = await App.Database.GetNotesAsync();
         }
 
+
+
         async void OnAddClicked(object sender, EventArgs e)
         {
             // Navigate to the NoteEntryPage.
